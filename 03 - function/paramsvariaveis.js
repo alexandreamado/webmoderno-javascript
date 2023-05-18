@@ -7,5 +7,5 @@ function soma() {
 }
 
 console.log(soma());
-console.log(soma(1));
-console.log(soma(1, 2, 3, 4, 5));
+console.log(soma(1, 4, 3, 5, 4, 3));
+console.log(soma('a', 'b', 'c'))
