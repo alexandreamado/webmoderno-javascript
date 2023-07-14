@@ -20,5 +20,11 @@ function gerarvariosNumeros() {
     gerarNumeroAleatorio(1, 60, 2000),
     gerarNumeroAleatorio(1, 60, 1200),
   ])
-} 
-gerarvariosNumeros().then(numeros => console.log(numeros))
+}  
+
+console.time('promise')
+gerarvariosNumeros()
+  .then(console.log)
+  .then(() => {
+    console.timeLog('promise')
+  })
