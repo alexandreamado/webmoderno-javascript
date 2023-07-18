@@ -14,7 +14,6 @@ const carinho = [
 ]
 
 //Retornar um array apenas com os preços 
-
 const paraObjecto = json => JSON.parse(json)
 const apenasPreco = produto => produto.preco 
 

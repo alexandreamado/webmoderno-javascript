@@ -1,0 +1,102 @@
+<div class="wm-slider">
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem1.jpg"
+      alt="Praia"
+      width="400"
+      title="Praia"
+    />
+  </p>
+  <p>
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem2.gif"
+      alt="Praia"
+      width="400"
+      title="Praia"
+    />
+  </p>
+
+  <p class="circular">
+    <img
+      src="http://files.cod3r.com.br/curso-web/imagem3.png"
+      alt="Praia"
+      width="400"
+      title="Praia"
+    />
+  </p>
+
+  <p class="texto">
+    <img
+      src="http://files.cod3r.com.br/curso-web/avatar.jpg"
+      alt="Praia"
+      height="50"
+      title="Praia"
+      align="left"
+    />
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae accusamus
+    commodi architecto natus necessitatibus hic corporis vitae sequi provident,
+    ex amet est error quos consequatur facilis a illum modi eligendi?
+  </p>
+
+  <p class="cidade"></p>
+
+  <p>
+    <picture>
+      <source
+        srcset="http://files.cod3r.com.br/curso-web/logo-larga.png"
+        media="(min-width: 600px)"
+      />
+
+      <img
+        src="http://files.cod3r.com.br/curso-web/logo-estreita.png"
+        alt="logo"
+      />
+    </picture>
+  </p>
+</div> 
+
+<script>
+    function mover(elem, inicio, fim, callback) {
+      const novoInicio = inicio - passo
+      if(novoInicio >= fim) {
+        elem.style.left = novoInicio + 'px';
+        setTimeout(() => mover(elem, novoInicio, fim, passo, callback), 7)
+      }else {
+        callback()
+      }
+    } 
+
+    const p = document.querySelector('[wm-slider] > p')
+    p.style.display = "block"
+
+</script>
+
+
+<style>
+  p {
+    position: absolute;
+    display: none;
+  } 
+
+  .circular {
+    width: 400px;
+    background-color: #444;
+  }
+
+  .texto {
+    width: 400px;
+  }
+
+  .texto img {
+    margin-right: 10px;
+  }
+
+  .cidade {
+    width: 513px;
+    height: 342px;
+    background-image: url("http://files.cod3r.com.br/curso-web/imagem4.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+</style>
