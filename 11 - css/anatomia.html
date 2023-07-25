@@ -1,16 +1,30 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Anatomia CSS</title>
     <style>
-        /* ... */
+      .selector {
+        color: #222;
+        font-size: 30px;
+        text-align: center;
+        border: 2px solid red;
+        font-family: Arial, Helvetica, sans-serif;
+        width: calc(100% - 40px);
+        background-color: rgb(34, 152, 189);
+      }  
+      .selector:hover {
+        background-color: brown;
+        color: #fff;
+      }
+      /* Presudo elementos */
+      .selector::first-letter {
+        font-size: 60px;
+      }
     </style>
-</head>
+  </head>
 
-<body>
+  <body>
     <div class="selector">Conteúdo</div>
-</body>
-
+  </body>
 </html>
