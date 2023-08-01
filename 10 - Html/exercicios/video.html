@@ -20,13 +20,33 @@
     width: 500px;
     border: 1px solid #ccc;
     margin: 20px;
-  } 
+  }
 
   .progresso > div {
     background: red;
     color: #fff;
     height: 100%;
-    text-align: right;font-size: 14px;
+    text-align: right;
+    font-size: 14px;
     width: 0%;
   }
 </style>
+
+<script>
+  function configurarVideo(id) {
+    const video = document.getElementById(id);
+    video.oncontextmenu = () => false;
+
+    document.querySelector(`[wm-player=${id}]`).onclick = e => video.play();
+    document.querySelector(`[wm-pause=${id}]`).onclick = e => video.pause();
+
+    setInterval(() => {
+      const percentual = (video.currentTime / video.duration) * 100;
+      const valorDiv = document.querySelector(`[wm-progresso=${id}] > div`);
+      valorDiv.style.width = `${percentual}%`
+      valorDiv.innerHTML = `${percentual.toFixed(1)}%`
+    }, 500)
+  }
+
+  configurarVideo("meuVideo");
+</script>
