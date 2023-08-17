@@ -10,4 +10,4 @@ Object.defineProperty(jsx, 'name', {
 jsx.name = 'Alexandre'
 delete jsx.name
 
-console.log(jsx)
+console.log(jsx) 

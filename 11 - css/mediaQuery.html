@@ -11,7 +11,20 @@
             background-color: coral;
             border: solid 5px;
             display: none;
+        } 
+
+        @media (max-width: 800px) {
+            .muito-pequeno {display: block;}
+        } 
+
+        @media (max-width: 1000px), (orientation: landscape) {
+            .muito-pequeno {display: block;}
         }
+
+        @media (min-width: 500px) and (max-width: 1000px) {
+            .intervalo {display: block;}
+        }
+
     </style>
 </head>
 <body>
