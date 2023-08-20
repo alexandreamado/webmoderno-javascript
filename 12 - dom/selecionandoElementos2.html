@@ -9,30 +9,37 @@
     <div id="primeiro">#primeiro</div>
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
+
     <script>
       document.querySelector("#primeiro").classList.add("destaque");
 
-      const selecionar = (selector) =>
+      const selecionar = (seletor) => {
         document
-          .querySelectorAll(selector)
+          .querySelectorAll(seletor)
           .forEach((e) => e.classList.add("destaque"));
+      };
 
-      const descelecionar = (selector) =>
+      const deselecionar = (seletor) => {
         document
-          .querySelectorAll(selector)
+          .querySelectorAll(seletor)
           .forEach((e) => e.classList.remove("destaque"));
+      };
 
       selecionar("div");
-      descelecionar("*");
+      deselecionar("div");
+      selecionar("div:nth-child(1)");
+
+      deselecionar("*");
       selecionar(".terceiro.ultimo");
-      selecionar("*");
       selecionar(":not(#primeiro)");
-      descelecionar("*");
+
+      deselecionar("*");
       selecionar(":nth-child(1)");
 
-      descelecionar("*");
+      deselecionar("*");
+
       selecionar("div:nth-of-type(1)");
-      descelecionar("*");
+      deselecionar("*");
     </script>
   </body>
 </html>
